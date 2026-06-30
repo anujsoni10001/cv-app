@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: cv-backend
+    restart: unless-stopped
+    environment:
+      - PORT=4000
+      - DB_PATH=/app/data/cv.db
+    volumes:
+      - cv-data:/app/data
+    expose:
+      - "4000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: /api
+    container_name: cv-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  cv-data:
