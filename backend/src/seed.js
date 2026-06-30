@@ -9,7 +9,7 @@ const upsertProfile = db.prepare(`
 `);
 
 upsertProfile.run({
-  name: 'Your Name',
+  name: 'Anuj Soni',
   title: 'Software Engineer',
   email: 'you@example.com',
   phone: '+91-00000-00000',
