@@ -11,7 +11,7 @@ const upsertProfile = db.prepare(`
 upsertProfile.run({
   name: 'Anuj Soni',
   title: 'Software Engineer',
-  email: 'anuj@example.com',
+  email: 'anuj@gmail.com',
   phone: '+91-00000-00000',
   location: 'Madhya Pradesh, India',
   summary: 'Replace this with a short professional summary about yourself. Rakesh'
