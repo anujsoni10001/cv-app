@@ -14,7 +14,7 @@ upsertProfile.run({
   email: 'you@example.com',
   phone: '+91-00000-00000',
   location: 'Madhya Pradesh, India',
-  summary: 'Replace this with a short professional summary about yourself.'
+  summary: 'Replace this with a short professional summary about yourself. Rakesh'
 });
 
 db.exec('DELETE FROM experience; DELETE FROM projects; DELETE FROM skills;');
